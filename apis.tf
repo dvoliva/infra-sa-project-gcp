@@ -1,7 +1,7 @@
 
 resource "google_project_service" "required_apis" {
   for_each = toset([
-    "bigquery.google.com",
+    "bigquery.googleapis.com",
     "dataform.googleapis.com",         # API de Dataform
     "storage.googleapis.com",          # API de Cloud Storage
     "iam.googleapis.com",              # API de IAM
