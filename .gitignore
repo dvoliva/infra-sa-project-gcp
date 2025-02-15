@@ -38,5 +38,5 @@ override.tf.json
 terraform.rc
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform
-elt-project-447719*
+sentiment-analysis*
 .venv/

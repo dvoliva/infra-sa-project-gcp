@@ -9,9 +9,3 @@ provider "google" {
   region      = var.region_name
 }
 
-#definir provider para GCP Dataform
-provider "google-beta" {
-  credentials = var.credentials_json_path
-  project     = var.project_id
-  region      = var.region_name
-}

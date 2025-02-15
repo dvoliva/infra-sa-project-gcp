@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket      = "elt-terraform-state"
+    bucket      = "tf-state"
     prefix      = "terraform/state"
-    credentials = "./elt-project-447719-69ccb8f24b6b.json"
+    credentials = "./sentiment-analysis-450917-1ff48b5f1891.json"
   }
 }
