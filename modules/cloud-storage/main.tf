@@ -1,5 +1,5 @@
-resource "google_storage_bucket" "bucket_for_tfstate" {
-  name     = var.bucket_name
+resource "google_storage_bucket" "tfstate_bucket" {
+  name     = "${var.project_id}-tf-bucket"
   location = var.region_name
 
   force_destroy               = false

@@ -1,6 +1,6 @@
 module "cloud-storage" {
   source      = "./modules/cloud-storage"
-  bucket_name = "tf-state"
+  bucket_name = var.bucket_name
   region_name = var.region_name
   project_id  = var.project_id
 }

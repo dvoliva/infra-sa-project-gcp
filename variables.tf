@@ -1,13 +1,18 @@
 variable "project_id" {
-  type = string
+    type = string
 }
 
 variable "region_name" {
-  type    = string
+  type = string
   default = "us-central1"
 }
 
 variable "credentials_json_path" {
+  type = string
+}
+
+variable "bucket_name" {
+  description = "nombre del bucket en cloud storage"
   type = string
 }
 
@@ -19,10 +24,6 @@ variable "credentials_json_path" {
 #     })
 # }
 
-# variable "bucket_name" {
-#   description = "nombre del bucket en cloud storage"
-#   type = string
-# }
 
 # variable "dataform_repo_name" {
 #   description = "nombre del repo en dataform"
