@@ -36,7 +36,7 @@ jobs:
             -var="region_name=${{ secrets.TF_VAR_region_name }}"
 
       - name: Manual approval before applying
-        uses: peter-evans/workflow-dispatch@v1
+        uses: trstringer/manual-approval@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
