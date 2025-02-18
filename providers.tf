@@ -5,6 +5,6 @@
 
 provider "google" {
   # credentials = var.credentials_json_path
-  project     = var.project_id
-  region      = var.region_name
+  project = var.project_id
+  region  = var.region_name
 }

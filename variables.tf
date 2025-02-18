@@ -1,9 +1,9 @@
 variable "project_id" {
-    type = string
+  type = string
 }
 
 variable "region_name" {
-  type = string
+  type    = string
   default = "us-central1"
 }
 
@@ -13,7 +13,7 @@ variable "region_name" {
 
 variable "bucket_name" {
   description = "nombre del bucket en cloud storage"
-  type = string
+  type        = string
 }
 
 # variable "datasets"{
