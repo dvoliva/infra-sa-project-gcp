@@ -23,9 +23,3 @@ variable "bucket_name" {
 #       poduction = string 
 #     })
 # }
-
-
-# variable "dataform_repo_name" {
-#   description = "nombre del repo en dataform"
-#   type = string
-# }

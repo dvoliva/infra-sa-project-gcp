@@ -4,3 +4,8 @@ module "cloud-storage" {
   region_name = var.region_name
   project_id  = var.project_id
 }
+
+module "iam" {
+  source     = "./modules/iam"
+  project_id = var.project_id
+}
