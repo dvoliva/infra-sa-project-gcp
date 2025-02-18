@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - master
-
+  workflow_dispatch:
+    
 permissions:
   issues: write  # Permite la creación y manipulación de issues
   pull-requests: write  # Permite la manipulación de pull requests
