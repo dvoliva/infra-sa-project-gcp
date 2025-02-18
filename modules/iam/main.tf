@@ -1,5 +1,5 @@
 locals {
-  service_accounts = jsondecode(file("${path.module}/service_accounts.json")).service_accounts
+  service_accounts = jsondecode(file("${path.module}/service_accounts.json"))
 }
 
 resource "google_service_account" "sa" {
