@@ -15,15 +15,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Authenticate with Google Cloud
-        run: echo "${{ secrets.GCP_TF_KEY }}" > $HOME/gcp-key.json
-
-      - name: Configure Google Cloud SDK
         uses: google-github-actions/auth@v2
         with:
-          credentials_json: ${{ secrets.GCP_TF_KEY }}
-
-      - name: Export GOOGLE_APPLICATION_CREDENTIALS
-        run: echo "GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcp-key.json" >> $GITHUB_ENV
+          credentials_json: ${{ secrets.GCP_TF_KEY }}  # Usa el secreto de autenticación de Google Cloud
 
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
@@ -39,3 +33,4 @@ jobs:
           -var="project_id=${{ secrets.TF_VAR_project_id }}" \
           -var="bucket_name=${{ secrets.TF_VAR_bucket_name }}" \
           -var="region_name=${{ secrets.TF_VAR_region_name }}"
+

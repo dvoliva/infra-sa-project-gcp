@@ -7,9 +7,9 @@ variable "region_name" {
   default = "us-central1"
 }
 
-variable "credentials_json_path" {
-  type = string
-}
+# variable "credentials_json_path" {
+#   type = string
+# }
 
 variable "bucket_name" {
   description = "nombre del bucket en cloud storage"
