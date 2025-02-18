@@ -24,8 +24,6 @@ jobs:
 
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
-        with:
-          terraform_version: "1.6.3"
 
       - name: Initialize Terraform
         run: terraform init
@@ -34,4 +32,4 @@ jobs:
         run: terraform validate
 
       - name: Generate Terraform plan
-        run: terraform plan -var-file=variables.tfvars
+        run: terraform plan
