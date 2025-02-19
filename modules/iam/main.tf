@@ -7,3 +7,11 @@ resource "google_service_account" "sa" {
   account_id   = each.value.name
   display_name = each.value.display_name
 }
+
+resource "google_project_iam_member" "sa_roles" {
+  for_each = { for sa in local.service_accounts : sa.name => sa }
+
+  project = var.project_id
+  role    = each.value.roles[*]
+  member  = "serviceAccount:${each.value.name}@${var.project_id}.iam.gserviceaccount.com"
+}
