@@ -11,17 +11,3 @@ resource "google_storage_bucket" "tfstate_bucket" {
   }
 }
 
-resource "google_storage_bucket" "data-buckets" {
-  for_each = toset(var.bucket_name)
-
-  name     = each.key
-  location = var.region_name
-
-  force_destroy               = false
-  public_access_prevention    = "enforced"
-  uniform_bucket_level_access = true
-
-  versioning {
-    enabled = true
-  }
-}
