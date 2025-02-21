@@ -1,7 +1,7 @@
 resource "google_storage_bucket" "data_bucket" {
   for_each = toset(var.bucket_name)
 
-  name     = each.key
+  name     = "${var.project_id}-${each.key}-bucket"
   location = var.region_name
 
   force_destroy               = false

@@ -19,10 +19,10 @@ module "cloud-storage" {
 module "cloud-storage-data-buckets" {
   source      = "./modules/cloud-storage/data-buckets"
   bucket_name = [
-    "sentiment-analysis-raw-data",
-    "sentiment-analysis-intermediate-data",
-    "sentiment-analysis-models",
-    "sentiment-analysis-logs"
+    "raw-data",
+    "intermediate-data",
+    "models",
+    "logs"
   ]
   region_name = var.region_name
   project_id = var.project_id

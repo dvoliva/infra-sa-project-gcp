@@ -1,5 +1,5 @@
 variable "bucket_name" {
-  type = string
+  type = list(string)
   description = "bucket for Terraform State"
 }
 
