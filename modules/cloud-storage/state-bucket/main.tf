@@ -11,7 +11,7 @@ resource "google_storage_bucket" "tfstate_bucket" {
   }
 }
 
-resource "google_storage_bucket" "buckets" {
+resource "google_storage_bucket" "data-buckets" {
   for_each = toset(var.bucket_name)
 
   name     = each.key
